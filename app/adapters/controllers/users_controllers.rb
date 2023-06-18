@@ -3,7 +3,7 @@
 require './app/usecases/users/create'
 
 class UsersController
-  def create(params)
-    Users::Create.new(params).call
+  def self.create(params)
+    Users::Create.new(params: params).call
   end
 end
