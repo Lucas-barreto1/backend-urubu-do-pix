@@ -7,6 +7,6 @@ Bundler.require(Sinatra::Base.environment)  # load all the environment specific 
 require 'active_support/deprecation'
 require 'active_support/all'
 
-# Dotenv.load
+Dotenv.load
 
-# set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH', nil) }
+set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH', nil) }
