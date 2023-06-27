@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_26_234403) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_005637) do
   create_table "orders", force: :cascade do |t|
     t.float "value"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "order_id"
+    t.string "transaction_type"
+    t.float "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
